@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSSを読み込む -->
+  <link rel="stylesheet" href="../css/button.css">
+  <!-- JSを読み込む -->
+  <script src="../js/button.js" defer></script>
+  <title>Document</title>
+  <script>
+          document.addEventListener('DOMContentLoaded', () => {
+        function createParagraph() {
+          const para = document.createElement('p');
+          para.textContent = 'You clicked the button!';
+          document.body.appendChild(para);
+        }
+
+        const buttons = document.querySelectorAll('button');
+
+        for (const button of buttons) {
+          button.addEventListener('click', createParagraph);
+        }
+      });
+  </script>
+</head>
+<body>
+  <h1>どうも!</h1>
+  <button>Player 1: Chris</button>
+</body>
+</html>
