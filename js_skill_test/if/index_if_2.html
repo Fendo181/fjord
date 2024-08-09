@@ -30,18 +30,27 @@
   
     // Add your code here
     if (machineActive === true) {
-      switch (score) {
-        case 100:
-          response = '素晴らしいスコアです!';
-          break;
-        case 90:
-          response = 'とても良いスコアです!';
-          break;
-        case 75:
-          response = 'まぁいいでしょう!';
-          break;
-        default:
-          response = 'もっと頑張りましょう!';
+      // switch (score) {
+      //   case 100:
+      //     response = '素晴らしいスコアです!';
+      //     break;
+      //   case 90:
+      //     response = 'とても良いスコアです!';
+      //     break;
+      //   case 75:
+      //     response = 'まぁいいでしょう!';
+      //     break;
+      //   default:
+      //     response = 'もっと頑張りましょう!';
+      // }
+      if (score === 100) {
+        response = '素晴らしいスコアです!';
+      } else if (score === 90) {
+        response = 'とても良いスコアです!';
+      } else if (score === 75) {
+        response = 'まぁいいでしょう!';
+      } else {
+        response = 'もっと頑張りましょう!';
       }
     } else {
        response = 'まずは電源を入れてください！'
