@@ -12,3 +12,10 @@ const toLowerCaseResult = cats.map(toLowerCase);
 for (const cat of toLowerCaseResult) {
   console.log(cat);
 }
+
+// filterを使ってJから始まる文字だけを表示する
+function lStartCat(cat) {
+  return cat.startsWith('J');
+}
+const catsFilter = cats.filter(lStartCat);
+console.log(catsFilter);
