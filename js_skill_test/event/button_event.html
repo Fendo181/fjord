@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Events: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      button {
+        display: block;
+        margin: 20px 0 20px 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+    </section>
+
+    <button class="off">Machine is off</button>
+
+  <script>
+  const btn = document.querySelector('.off');
+  let isRandomized = false;
+  const originalText = btn.textContent;
+  
+    
+  function randomText(text) {
+    // 受け取ったtextの文字をランダムにして返す
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+      result += text.charAt(Math.floor(Math.random() * text.length));
+    }
+    return result;
+  }
+  
+  btn.addEventListener('click', function(event) {
+    if (isRandomized) {
+      const text = event.target.textContent;
+      event.target.textContent = randomText(text);
+    } else {
+      event.target.textContent = originalText;
+    }
+    isRandomized = !isRandomized;
+  });
+  </script>
+
+  </body>
+</html>
