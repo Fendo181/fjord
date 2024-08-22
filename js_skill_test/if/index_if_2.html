@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview"></section>
+
+  </body>
+  
+  
+  <script>
+    let response;
+    let score = 100;
+    let machineActive = true;
+  
+    // Add your code here
+    if (machineActive === true) {
+      // switch (score) {
+      //   case 100:
+      //     response = '素晴らしいスコアです!';
+      //     break;
+      //   case 90:
+      //     response = 'とても良いスコアです!';
+      //     break;
+      //   case 75:
+      //     response = 'まぁいいでしょう!';
+      //     break;
+      //   default:
+      //     response = 'もっと頑張りましょう!';
+      // }
+      if (score === 100) {
+        response = '素晴らしいスコアです!';
+      } else if (score === 90) {
+        response = 'とても良いスコアです!';
+      } else if (score === 75) {
+        response = 'まぁいいでしょう!';
+      } else {
+        response = 'もっと頑張りましょう!';
+      }
+    } else {
+       response = 'まずは電源を入れてください！'
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+
+    para1.textContent = `Your score is ${ score }`;
+    para2.textContent = response;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+    
+  </script>
+
+</html>
